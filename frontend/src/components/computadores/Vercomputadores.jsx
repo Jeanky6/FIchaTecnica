@@ -28,7 +28,7 @@ function ComputadorList() {
 
   useEffect(() => {
     const results = computadores.filter(comp =>
-      comp.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      comp.name.toLowerCase().includes(searchTerm.toLowerCase())   ||
       comp.manufacturer.toLowerCase().includes(searchTerm.toLowerCase()) ||
       comp.user.toLowerCase().includes(searchTerm.toLowerCase())
     );

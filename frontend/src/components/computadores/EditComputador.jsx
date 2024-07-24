@@ -88,36 +88,36 @@ const EditComputador = () => {
             </Card.Header>
             <Card.Body className="p-4">
               <h2 className="fw-bold mb-2 text-uppercase text-center">
-                Edit Computer Record
+                Editar Registro de Computadora
               </h2>
               <p className="text-dark-50 mb-4 text-center">
-                Update the details below to edit the computer.
+                Actualice los detalles a continuación para editar la computadora.
               </p>
               <Form onSubmit={handleSubmit}>
                 <Row>
                   <Col xs={12} md={6}>
                     <Form.Group controlId="name" className="mb-3">
-                      <Form.Label>Name</Form.Label>
+                      <Form.Label>Nombre</Form.Label>
                       <Form.Control
                         type="text"
-                        placeholder="Enter computer name"
+                        placeholder="Ingrese el nombre de la computadora"
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
                       />
                     </Form.Group>
                     <Form.Group controlId="location" className="mb-3">
-                      <Form.Label>Location</Form.Label>
+                      <Form.Label>Ubicación</Form.Label>
                       <Form.Control
                         type="text"
-                        placeholder="Enter location"
+                        placeholder="Ingrese la ubicación"
                         name="location"
                         value={formData.location}
                         onChange={handleChange}
                       />
                     </Form.Group>
                     <Form.Group controlId="computerType" className="mb-3">
-                      <Form.Label>Computer Type</Form.Label>
+                      <Form.Label>Tipo de Computadora</Form.Label>
                       <Form.Control
                         as="select"
                         name="computerType"
@@ -125,19 +125,19 @@ const EditComputador = () => {
                         onChange={handleChange}
                       >
                         <option value="" disabled>
-                          Select type
+                          Seleccione tipo
                         </option>
-                        <option value="desktop">Desktop</option>
-                        <option value="laptop">Laptop</option>
-                        <option value="server">Server</option>
-                        <option value="other">Other</option>
+                        <option value="desktop">Escritorio</option>
+                        <option value="laptop">Portátil</option>
+                        <option value="server">Servidor</option>
+                        <option value="other">Otro</option>
                       </Form.Control>
                     </Form.Group>
                     <Form.Group controlId="manufacturer" className="mb-3">
-                      <Form.Label>Manufacturer</Form.Label>
+                      <Form.Label>Fabricante</Form.Label>
                       <Form.Control
                         type="text"
-                        placeholder="Enter manufacturer"
+                        placeholder="Ingrese el fabricante"
                         name="manufacturer"
                         value={formData.manufacturer}
                         onChange={handleChange}
@@ -146,40 +146,40 @@ const EditComputador = () => {
                   </Col>
                   <Col xs={12} md={6}>
                     <Form.Group controlId="technicianInCharge" className="mb-3">
-                      <Form.Label>Technician In Charge</Form.Label>
+                      <Form.Label>Técnico a Cargo</Form.Label>
                       <Form.Control
                         type="text"
-                        placeholder="Enter technician name"
+                        placeholder="Ingrese el nombre del técnico"
                         name="technicianInCharge"
                         value={formData.technicianInCharge}
                         onChange={handleChange}
                       />
                     </Form.Group>
                     <Form.Group controlId="groupInCharge" className="mb-3">
-                      <Form.Label>Group In Charge</Form.Label>
+                      <Form.Label>Grupo a Cargo</Form.Label>
                       <Form.Control
                         type="text"
-                        placeholder="Enter group name"
+                        placeholder="Ingrese el nombre del grupo"
                         name="groupInCharge"
                         value={formData.groupInCharge}
                         onChange={handleChange}
                       />
                     </Form.Group>
                     <Form.Group controlId="alternateUsernameNumber" className="mb-3">
-                      <Form.Label>Alternate Username Number</Form.Label>
+                      <Form.Label>Número de Usuario Alternativo</Form.Label>
                       <Form.Control
                         type="text"
-                        placeholder="Enter alternate username number"
+                        placeholder="Ingrese el número de usuario alternativo"
                         name="alternateUsernameNumber"
                         value={formData.alternateUsernameNumber}
                         onChange={handleChange}
                       />
                     </Form.Group>
                     <Form.Group controlId="serialNumber" className="mb-3">
-                      <Form.Label>Serial Number</Form.Label>
+                      <Form.Label>Número de Serie</Form.Label>
                       <Form.Control
                         type="text"
-                        placeholder="Enter serial number"
+                        placeholder="Ingrese el número de serie"
                         name="serialNumber"
                         value={formData.serialNumber}
                         onChange={handleChange}
@@ -190,61 +190,61 @@ const EditComputador = () => {
                 <Row>
                   <Col xs={12}>
                     <Form.Group controlId="alternateUsername" className="mb-3">
-                      <Form.Label>Alternate Username</Form.Label>
+                      <Form.Label>Usuario Alternativo</Form.Label>
                       <Form.Control
                         type="text"
-                        placeholder="Enter alternate username"
+                        placeholder="Ingrese el usuario alternativo"
                         name="alternateUsername"
                         value={formData.alternateUsername}
                         onChange={handleChange}
                       />
                     </Form.Group>
                     <Form.Group controlId="inventoryNumber" className="mb-3">
-                      <Form.Label>Inventory Number</Form.Label>
+                      <Form.Label>Número de Inventario</Form.Label>
                       <Form.Control
                         type="text"
-                        placeholder="Enter inventory number"
+                        placeholder="Ingrese el número de inventario"
                         name="inventoryNumber"
                         value={formData.inventoryNumber}
                         onChange={handleChange}
                       />
                     </Form.Group>
                     <Form.Group controlId="user" className="mb-3">
-                      <Form.Label>User</Form.Label>
+                      <Form.Label>Usuario</Form.Label>
                       <Form.Control
                         type="text"
-                        placeholder="Enter user name"
+                        placeholder="Ingrese el nombre del usuario"
                         name="user"
                         value={formData.user}
                         onChange={handleChange}
                       />
                     </Form.Group>
                     <Form.Group controlId="group" className="mb-3">
-                      <Form.Label>Group</Form.Label>
+                      <Form.Label>Grupo</Form.Label>
                       <Form.Control
                         type="text"
-                        placeholder="Enter group name"
+                        placeholder="Ingrese el nombre del grupo"
                         name="group"
                         value={formData.group}
                         onChange={handleChange}
                       />
                     </Form.Group>
                     <Form.Group controlId="comments" className="mb-3">
-                      <Form.Label>Comments</Form.Label>
+                      <Form.Label>Comentarios</Form.Label>
                       <Form.Control
                         as="textarea"
                         rows={4}
-                        placeholder="Enter any additional comments"
+                        placeholder="Ingrese cualquier comentario adicional"
                         name="comments"
                         value={formData.comments}
                         onChange={handleChange}
                       />
                     </Form.Group>
                     <Form.Group controlId="updateSource" className="mb-3">
-                      <Form.Label>Update Source</Form.Label>
+                      <Form.Label>Fuente de Actualización</Form.Label>
                       <Form.Control
                         type="text"
-                        placeholder="Enter update source"
+                        placeholder="Ingrese la fuente de actualización"
                         name="updateSource"
                         value={formData.updateSource}
                         onChange={handleChange}
@@ -256,7 +256,7 @@ const EditComputador = () => {
                   <center>
                     <CDBBtn type="submit" className="Buttonn">
                       <CDBIcon icon="fa-solid fa-save" className="ms-1" />
-                      Save Changes
+                      Guardar Cambios
                     </CDBBtn>
                   </center>
                 </div>

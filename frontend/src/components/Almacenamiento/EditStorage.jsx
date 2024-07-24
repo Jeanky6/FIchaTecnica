@@ -86,63 +86,63 @@ const EditStorage = () => {
             </Card.Header>
             <Card.Body className="p-4">
               <h2 className="fw-bold mb-2 text-uppercase text-center">
-                Edit Storage Record
+                Editar Registro de Almacenamiento
               </h2>
               <p className="text-dark-50 mb-4 text-center">
-                Update the details below to edit the storage device.
+                Actualiza los detalles a continuación para editar el dispositivo de almacenamiento.
               </p>
               <Form onSubmit={handleSubmit}>
                 <Row>
                   <Col xs={12} md={6}>
                     <Form.Group controlId="brand" className="mb-3">
-                      <Form.Label>Brand</Form.Label>
+                      <Form.Label>Marca</Form.Label>
                       <Form.Control
                         type="text"
-                        placeholder="Enter storage brand"
+                        placeholder="Introduce la marca del almacenamiento"
                         name="brand"
                         value={formData.brand}
                         onChange={handleChange}
                       />
                     </Form.Group>
                     <Form.Group controlId="model" className="mb-3">
-                      <Form.Label>Model</Form.Label>
+                      <Form.Label>Modelo</Form.Label>
                       <Form.Control
                         type="text"
-                        placeholder="Enter storage model"
+                        placeholder="Introduce el modelo del almacenamiento"
                         name="model"
                         value={formData.model}
                         onChange={handleChange}
                       />
                     </Form.Group>
                     <Form.Group controlId="capacity" className="mb-3">
-                      <Form.Label>Capacity (GB)</Form.Label>
+                      <Form.Label>Capacidad (GB)</Form.Label>
                       <Form.Control
                         type="number"
-                        placeholder="Enter capacity"
+                        placeholder="Introduce la capacidad"
                         name="capacity"
                         value={formData.capacity}
                         onChange={handleChange}
                       />
                     </Form.Group>
                     <Form.Group controlId="type" className="mb-3">
-                      <Form.Label>Type</Form.Label>
+                      <Form.Label>Tipo</Form.Label>
                       <Form.Control
                         as="select"
                         name="type"
                         value={formData.type}
                         onChange={handleChange}
                       >
-                        <option value="">Select type</option>
+                        <option value="">Selecciona el tipo</option>
                         <option value="SSD">SSD</option>
                         <option value="HDD">HDD</option>
                         <option value="NVMe">NVMe</option>
                       </Form.Control>
                     </Form.Group>
                     <Form.Group controlId="formFactor" className="mb-3">
-                      <Form.Label>Form Factor</Form.Label>
+                      <Form.Label>Factor de Forma</Form.Label>
                       <Form.Control
                         type="text"
-                        placeholder="Enter form factor"
+                        placeholder="Introduce el factor de forma"
                         name="formFactor"
                         value={formData.formFactor}
                         onChange={handleChange}
@@ -151,47 +151,47 @@ const EditStorage = () => {
                   </Col>
                   <Col xs={12} md={6}>
                     <Form.Group controlId="interface" className="mb-3">
-                      <Form.Label>Interface</Form.Label>
+                      <Form.Label>Interfaz</Form.Label>
                       <Form.Control
                         type="text"
-                        placeholder="Enter interface"
+                        placeholder="Introduce la interfaz"
                         name="interface"
                         value={formData.interface}
                         onChange={handleChange}
                       />
                     </Form.Group>
                     <Form.Group controlId="readSpeed" className="mb-3">
-                      <Form.Label>Read Speed (MB/s)</Form.Label>
+                      <Form.Label>Velocidad de Lectura (MB/s)</Form.Label>
                       <Form.Control
                         type="number"
-                        placeholder="Enter read speed"
+                        placeholder="Introduce la velocidad de lectura"
                         name="readSpeed"
                         value={formData.readSpeed}
                         onChange={handleChange}
                       />
                     </Form.Group>
                     <Form.Group controlId="writeSpeed" className="mb-3">
-                      <Form.Label>Write Speed (MB/s)</Form.Label>
+                      <Form.Label>Velocidad de Escritura (MB/s)</Form.Label>
                       <Form.Control
                         type="number"
-                        placeholder="Enter write speed"
+                        placeholder="Introduce la velocidad de escritura"
                         name="writeSpeed"
                         value={formData.writeSpeed}
                         onChange={handleChange}
                       />
                     </Form.Group>
                     <Form.Group controlId="cache" className="mb-3">
-                      <Form.Label>Cache (MB)</Form.Label>
+                      <Form.Label>Caché (MB)</Form.Label>
                       <Form.Control
                         type="number"
-                        placeholder="Enter cache size"
+                        placeholder="Introduce el tamaño de la caché"
                         name="cache"
                         value={formData.cache}
                         onChange={handleChange}
                       />
                     </Form.Group>
                     <Form.Group controlId="releaseDate" className="mb-3">
-                      <Form.Label>Release Date</Form.Label>
+                      <Form.Label>Fecha de Lanzamiento</Form.Label>
                       <Form.Control
                         type="date"
                         name="releaseDate"
@@ -200,11 +200,11 @@ const EditStorage = () => {
                       />
                     </Form.Group>
                     <Form.Group controlId="price" className="mb-3">
-                      <Form.Label>Price ($)</Form.Label>
+                      <Form.Label>Precio ($)</Form.Label>
                       <Form.Control
                         type="number"
                         step="0.01"
-                        placeholder="Enter price"
+                        placeholder="Introduce el precio"
                         name="price"
                         value={formData.price}
                         onChange={handleChange}
@@ -216,7 +216,7 @@ const EditStorage = () => {
                   <center>
                     <CDBBtn type="submit" className="Buttonn">
                       <CDBIcon icon="save" className="ms-1" />
-                      Save Changes
+                      Guardar Cambios
                     </CDBBtn>
                   </center>
                 </div>

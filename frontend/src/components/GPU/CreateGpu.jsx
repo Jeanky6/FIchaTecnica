@@ -86,16 +86,16 @@ const CreateGPU = () => {
             </Card.Header>
             <Card.Body className="p-4">
               <h2 className="fw-bold mb-2 text-uppercase text-center">
-                Create New GPU
+                Crear Nueva GPU
               </h2>
               <Form onSubmit={handleSubmit}>
                 <Row>
                   <Col xs={12} md={6}>
                     <Form.Group controlId="brand" className="mb-3">
-                      <Form.Label>Brand</Form.Label>
+                      <Form.Label>Marca</Form.Label>
                       <Form.Control
                         type="text"
-                        placeholder="Enter brand"
+                        placeholder="Ingrese la Marca"
                         name="brand"
                         value={formData.brand}
                         onChange={handleChange}
@@ -103,10 +103,10 @@ const CreateGPU = () => {
                       />
                     </Form.Group>
                     <Form.Group controlId="model" className="mb-3">
-                      <Form.Label>Model</Form.Label>
+                      <Form.Label>Modelo</Form.Label>
                       <Form.Control
                         type="text"
-                        placeholder="Enter model"
+                        placeholder="Ingrese el modelo"
                         name="model"
                         value={formData.model}
                         onChange={handleChange}
@@ -114,10 +114,10 @@ const CreateGPU = () => {
                       />
                     </Form.Group>
                     <Form.Group controlId="memory" className="mb-3">
-                      <Form.Label>Memory (GB)</Form.Label>
+                      <Form.Label>Memoria (GB)</Form.Label>
                       <Form.Control
                         type="number"
-                        placeholder="Enter memory size"
+                        placeholder="Ingrese la capacidad de la memoria (GB)"
                         name="memory"
                         value={formData.memory}
                         onChange={handleChange}
@@ -125,10 +125,10 @@ const CreateGPU = () => {
                       />
                     </Form.Group>
                     <Form.Group controlId="memoryType" className="mb-3">
-                      <Form.Label>Memory Type</Form.Label>
+                      <Form.Label>Tipo de Memoria</Form.Label>
                       <Form.Control
                         type="text"
-                        placeholder="Enter memory type"
+                        placeholder="Ingrese el Tipo de Memoria"
                         name="memoryType"
                         value={formData.memoryType}
                         onChange={handleChange}
@@ -139,7 +139,7 @@ const CreateGPU = () => {
                       <Form.Label>Core Clock (MHz)</Form.Label>
                       <Form.Control
                         type="number"
-                        placeholder="Enter core clock"
+                        placeholder="Ingrese la frecuencia del núcleo"
                         name="coreClock"
                         value={formData.coreClock}
                         onChange={handleChange}
@@ -152,7 +152,7 @@ const CreateGPU = () => {
                       <Form.Label>Boost Clock (MHz)</Form.Label>
                       <Form.Control
                         type="number"
-                        placeholder="Enter boost clock"
+                        placeholder="Ingrese la frecuencia de aumento"
                         name="boostClock"
                         value={formData.boostClock}
                         onChange={handleChange}
@@ -162,7 +162,7 @@ const CreateGPU = () => {
                       <Form.Label>CUDA Cores</Form.Label>
                       <Form.Control
                         type="number"
-                        placeholder="Enter number of CUDA cores"
+                        placeholder="Ingrese el número de núcleos CUDA"
                         name="cudaCores"
                         value={formData.cudaCores}
                         onChange={handleChange}
@@ -172,14 +172,14 @@ const CreateGPU = () => {
                       <Form.Label>TDP (W)</Form.Label>
                       <Form.Control
                         type="number"
-                        placeholder="Enter TDP"
+                        placeholder="Ingrese el TDP"
                         name="tdp"
                         value={formData.tdp}
                         onChange={handleChange}
                       />
                     </Form.Group>
                     <Form.Group controlId="releaseDate" className="mb-3">
-                      <Form.Label>Release Date</Form.Label>
+                      <Form.Label>Fecha de Lanzamiento</Form.Label>
                       <Form.Control
                         type="date"
                         name="releaseDate"
@@ -188,11 +188,11 @@ const CreateGPU = () => {
                       />
                     </Form.Group>
                     <Form.Group controlId="price" className="mb-3">
-                      <Form.Label>Price ($)</Form.Label>
+                      <Form.Label>Precio ($)</Form.Label>
                       <Form.Control
                         type="number"
                         step="0.01"
-                        placeholder="Enter price"
+                        placeholder="Ingrese el precio"
                         name="price"
                         value={formData.price}
                         onChange={handleChange}
@@ -202,7 +202,7 @@ const CreateGPU = () => {
                 </Row>
                 <div className="text-center mt-4">
                   <CDBBtn type="submit" className="Buttonn">
-                    <CDBIcon icon="plus" className="ms-1" /> Add GPU
+                    <CDBIcon icon="plus" className="ms-1" /> Agregar GPU
                   </CDBBtn>
                 </div>
               </Form>

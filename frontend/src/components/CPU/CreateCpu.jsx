@@ -86,16 +86,16 @@ const CreateCPU = () => {
             </Card.Header>
             <Card.Body className="p-4">
               <h2 className="fw-bold mb-2 text-uppercase text-center">
-                Create New CPU
+                Crear Nuevo CPU
               </h2>
               <Form onSubmit={handleSubmit}>
                 <Row>
                   <Col xs={12} md={6}>
                     <Form.Group controlId="brand" className="mb-3">
-                      <Form.Label>Brand</Form.Label>
+                      <Form.Label>Marca</Form.Label>
                       <Form.Control
                         type="text"
-                        placeholder="Enter brand"
+                        placeholder="Ingrese la marca"
                         name="brand"
                         value={formData.brand}
                         onChange={handleChange}
@@ -103,10 +103,10 @@ const CreateCPU = () => {
                       />
                     </Form.Group>
                     <Form.Group controlId="model" className="mb-3">
-                      <Form.Label>Model</Form.Label>
+                      <Form.Label>Modelo</Form.Label>
                       <Form.Control
                         type="text"
-                        placeholder="Enter model"
+                        placeholder="Ingrese el modelo"
                         name="model"
                         value={formData.model}
                         onChange={handleChange}
@@ -114,10 +114,10 @@ const CreateCPU = () => {
                       />
                     </Form.Group>
                     <Form.Group controlId="cores" className="mb-3">
-                      <Form.Label>Cores</Form.Label>
+                      <Form.Label>Núcleos</Form.Label>
                       <Form.Control
                         type="number"
-                        placeholder="Enter number of cores"
+                        placeholder="Ingrese el número de núcleos"
                         name="cores"
                         value={formData.cores}
                         onChange={handleChange}
@@ -125,10 +125,10 @@ const CreateCPU = () => {
                       />
                     </Form.Group>
                     <Form.Group controlId="threads" className="mb-3">
-                      <Form.Label>Threads</Form.Label>
+                      <Form.Label>Hilos</Form.Label>
                       <Form.Control
                         type="number"
-                        placeholder="Enter number of threads"
+                        placeholder="Ingrese el número de hilos"
                         name="threads"
                         value={formData.threads}
                         onChange={handleChange}
@@ -136,11 +136,11 @@ const CreateCPU = () => {
                       />
                     </Form.Group>
                     <Form.Group controlId="baseClockSpeed" className="mb-3">
-                      <Form.Label>Base Clock Speed (GHz)</Form.Label>
+                      <Form.Label>Velocidad Base (GHz)</Form.Label>
                       <Form.Control
                         type="number"
                         step="0.1"
-                        placeholder="Enter base clock speed"
+                        placeholder="Ingrese la velocidad base"
                         name="baseClockSpeed"
                         value={formData.baseClockSpeed}
                         onChange={handleChange}
@@ -150,11 +150,11 @@ const CreateCPU = () => {
                   </Col>
                   <Col xs={12} md={6}>
                     <Form.Group controlId="turboClockSpeed" className="mb-3">
-                      <Form.Label>Turbo Clock Speed (GHz)</Form.Label>
+                      <Form.Label>Velocidad Turbo (GHz)</Form.Label>
                       <Form.Control
                         type="number"
                         step="0.1"
-                        placeholder="Enter turbo clock speed"
+                        placeholder="Ingrese la velocidad turbo"
                         name="turboClockSpeed"
                         value={formData.turboClockSpeed}
                         onChange={handleChange}
@@ -164,7 +164,7 @@ const CreateCPU = () => {
                       <Form.Label>Socket</Form.Label>
                       <Form.Control
                         type="text"
-                        placeholder="Enter socket type"
+                        placeholder="Ingrese el tipo de socket"
                         name="socket"
                         value={formData.socket}
                         onChange={handleChange}
@@ -175,14 +175,14 @@ const CreateCPU = () => {
                       <Form.Label>TDP (W)</Form.Label>
                       <Form.Control
                         type="number"
-                        placeholder="Enter TDP"
+                        placeholder="Ingrese el TDP"
                         name="tdp"
                         value={formData.tdp}
                         onChange={handleChange}
                       />
                     </Form.Group>
                     <Form.Group controlId="releaseDate" className="mb-3">
-                      <Form.Label>Release Date</Form.Label>
+                      <Form.Label>Fecha de Lanzamiento</Form.Label>
                       <Form.Control
                         type="date"
                         name="releaseDate"
@@ -191,11 +191,11 @@ const CreateCPU = () => {
                       />
                     </Form.Group>
                     <Form.Group controlId="price" className="mb-3">
-                      <Form.Label>Price ($)</Form.Label>
+                      <Form.Label>Precio ($)</Form.Label>
                       <Form.Control
                         type="number"
                         step="0.01"
-                        placeholder="Enter price"
+                        placeholder="Ingrese el precio"
                         name="price"
                         value={formData.price}
                         onChange={handleChange}
@@ -205,7 +205,7 @@ const CreateCPU = () => {
                 </Row>
                 <div className="text-center mt-4">
                   <CDBBtn type="submit" className="Buttonn">
-                    <CDBIcon icon="plus" className="ms-1" /> Add CPU
+                    <CDBIcon icon="plus" className="ms-1" /> Añadir CPU
                   </CDBBtn>
                 </div>
               </Form>

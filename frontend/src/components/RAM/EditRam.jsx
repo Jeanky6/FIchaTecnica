@@ -86,59 +86,59 @@ const EditRAM = () => {
             </Card.Header>
             <Card.Body className="p-4">
               <h2 className="fw-bold mb-2 text-uppercase text-center">
-                Edit RAM Record
+                Editar Registro de RAM
               </h2>
               <p className="text-dark-50 mb-4 text-center">
-                Update the details below to edit the RAM.
+                Actualice los detalles a continuación para editar la RAM.
               </p>
               <Form onSubmit={handleSubmit}>
                 <Row>
                   <Col xs={12} md={6}>
                     <Form.Group controlId="brand" className="mb-3">
-                      <Form.Label>Brand</Form.Label>
+                      <Form.Label>Marca</Form.Label>
                       <Form.Control
                         type="text"
-                        placeholder="Enter RAM brand"
+                        placeholder="Ingrese la marca de RAM"
                         name="brand"
                         value={formData.brand}
                         onChange={handleChange}
                       />
                     </Form.Group>
                     <Form.Group controlId="model" className="mb-3">
-                      <Form.Label>Model</Form.Label>
+                      <Form.Label>Modelo</Form.Label>
                       <Form.Control
                         type="text"
-                        placeholder="Enter RAM model"
+                        placeholder="Ingrese el modelo de RAM"
                         name="model"
                         value={formData.model}
                         onChange={handleChange}
                       />
                     </Form.Group>
                     <Form.Group controlId="capacity" className="mb-3">
-                      <Form.Label>Capacity (GB)</Form.Label>
+                      <Form.Label>Capacidad (GB)</Form.Label>
                       <Form.Control
                         type="number"
-                        placeholder="Enter capacity"
+                        placeholder="Ingrese la capacidad"
                         name="capacity"
                         value={formData.capacity}
                         onChange={handleChange}
                       />
                     </Form.Group>
                     <Form.Group controlId="type" className="mb-3">
-                      <Form.Label>Type</Form.Label>
+                      <Form.Label>Tipo</Form.Label>
                       <Form.Control
                         type="text"
-                        placeholder="Enter RAM type"
+                        placeholder="Ingrese el tipo de RAM"
                         name="type"
                         value={formData.type}
                         onChange={handleChange}
                       />
                     </Form.Group>
                     <Form.Group controlId="speed" className="mb-3">
-                      <Form.Label>Speed (MHz)</Form.Label>
+                      <Form.Label>Velocidad (MHz)</Form.Label>
                       <Form.Control
                         type="number"
-                        placeholder="Enter RAM speed"
+                        placeholder="Ingrese la velocidad de RAM"
                         name="speed"
                         value={formData.speed}
                         onChange={handleChange}
@@ -147,21 +147,21 @@ const EditRAM = () => {
                   </Col>
                   <Col xs={12} md={6}>
                     <Form.Group controlId="latency" className="mb-3">
-                      <Form.Label>Latency (CL)</Form.Label>
+                      <Form.Label>Latencia (CL)</Form.Label>
                       <Form.Control
                         type="number"
-                        placeholder="Enter latency"
+                        placeholder="Ingrese la latencia"
                         name="latency"
                         value={formData.latency}
                         onChange={handleChange}
                       />
                     </Form.Group>
                     <Form.Group controlId="voltage" className="mb-3">
-                      <Form.Label>Voltage (V)</Form.Label>
+                      <Form.Label>Voltaje (V)</Form.Label>
                       <Form.Control
                         type="number"
                         step="0.1"
-                        placeholder="Enter voltage"
+                        placeholder="Ingrese el voltaje"
                         name="voltage"
                         value={formData.voltage}
                         onChange={handleChange}
@@ -177,7 +177,7 @@ const EditRAM = () => {
                       />
                     </Form.Group>
                     <Form.Group controlId="releaseDate" className="mb-3">
-                      <Form.Label>Release Date</Form.Label>
+                      <Form.Label>Fecha de Lanzamiento</Form.Label>
                       <Form.Control
                         type="date"
                         name="releaseDate"
@@ -186,11 +186,11 @@ const EditRAM = () => {
                       />
                     </Form.Group>
                     <Form.Group controlId="price" className="mb-3">
-                      <Form.Label>Price ($)</Form.Label>
+                      <Form.Label>Precio ($)</Form.Label>
                       <Form.Control
                         type="number"
                         step="0.01"
-                        placeholder="Enter price"
+                        placeholder="Ingrese el precio"
                         name="price"
                         value={formData.price}
                         onChange={handleChange}
@@ -202,7 +202,7 @@ const EditRAM = () => {
                   <center>
                     <CDBBtn type="submit" className="Buttonn">
                       <CDBIcon icon="save" className="ms-1" />
-                      Save Changes
+                      Guardar Cambios
                     </CDBBtn>
                   </center>
                 </div>
