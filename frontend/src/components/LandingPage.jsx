@@ -11,12 +11,14 @@ function LandingPage() {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
+      <center>
       <h1>Bienvenido a TechSpecs</h1>
       <p>Descubre las especificaciones técnicas de los mejores computadores del mercado.</p>
       <div className="featured-computers">
         {/* Aquí puedes mostrar algunos computadores destacados */}
       </div>
       <Link to="/computadores" className="cta-button">Ver todos los computadores</Link>
+      </center>
     </motion.div>
   );
 }
