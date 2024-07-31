@@ -28,9 +28,8 @@ function ComputadorList() {
 
   useEffect(() => {
     const results = computadores.filter(comp =>
-      comp.name.toLowerCase().includes(searchTerm.toLowerCase())   ||
-      comp.manufacturer.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      comp.user.toLowerCase().includes(searchTerm.toLowerCase())
+      (comp.name?.toLowerCase().includes(searchTerm.toLowerCase()) || '') ||
+      (comp.location?.toLowerCase().includes(searchTerm.toLowerCase()) || '')
     );
     setFilteredComputadores(results);
   }, [searchTerm, computadores]);
@@ -61,7 +60,7 @@ function ComputadorList() {
           <FaSearch className="search-icon" />
           <input
             type="text"
-            placeholder="Buscar por nombre, fabricante o usuario..."
+            placeholder="Buscar por nombre o ubicacion"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
