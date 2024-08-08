@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaArrowLeft, FaEdit, FaTrash } from 'react-icons/fa';
-import './computadordetails.css';
+import './Computadordetails.css';
 
 function ComputadorDetalle() {
   const [computador, setComputador] = useState(null);
