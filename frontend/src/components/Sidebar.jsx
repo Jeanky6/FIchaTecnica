@@ -32,22 +32,6 @@ function Sidebar() {
             <motion.h3
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-            >
-              Categorías
-            </motion.h3>
-            <motion.ul
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.3 }}
-            >
-              <li><Link to="/computers?category=laptop">Laptops</Link></li>
-              <li><Link to="/computers?category=desktop">Desktops</Link></li>
-              <li><Link to="/computers?category=workstation">Workstations</Link></li>
-            </motion.ul>
-            <motion.h3
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
             >
               Componentes
