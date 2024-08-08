@@ -40,17 +40,17 @@ const CreateComputer = () => {
   useEffect(() => {
     const fetchComponents = async () => {
       try {
-        const cpuResponse = await axios.get("${URL.API}/api/v1/cpu");
+        const cpuResponse = await axios.get(`${URL.API}/api/v1/cpu`);
         setCpus(cpuResponse.data.cpus);
 
-        const gpuResponse = await axios.get("${URL.API}/api/v1/gpu");
+        const gpuResponse = await axios.get(`${URL.API}/api/v1/gpu`);
         setGpus(gpuResponse.data.gpus);
 
-        const ramResponse = await axios.get("${URL.API}/api/v1/ram");
+        const ramResponse = await axios.get(`${URL.API}/api/v1/ram`);
         setRams(ramResponse.data.rams);
 
         const storageResponse = await axios.get(
-          "${URL.API}/api/v1/storage"
+          `${URL.API}/api/v1/storage`
         );
         setStorages(storageResponse.data.storages);
       } catch (error) {
@@ -83,7 +83,7 @@ const CreateComputer = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "${URL.API}/api/v1/computador",
+        `${URL.API}/api/v1/computador`,
         formData
       );
       setSuccess(true);
