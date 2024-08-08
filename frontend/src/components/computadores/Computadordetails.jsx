@@ -62,7 +62,7 @@ function ComputadorDetalle() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <button className="back-button" onClick={() => navigate(-1)}>
+        <button className="back-button" onClick={() => navigate("/computadores")}>
           <FaArrowLeft /> Volver
         </button>
         <h1>{computador.name}</h1>

@@ -17,7 +17,7 @@ function Sidebar() {
   return (
     <>
       <button className="sidebar-toggle" onClick={toggleSidebar}>
-        {isOpen ? '☰' : '✕'} 
+        {isOpen ? '✕' : '☰'} 
       </button>
       <AnimatePresence>
         {(isOpen || window.innerWidth > 768) && (
