@@ -15,7 +15,7 @@ function GPUList() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('${URL.API}/api/v1/gpu')
+    axios.get(`${URL.API}/api/v1/gpu`)
       .then(response => {
         setGPUs(response.data.gpus);
         console.log(response.data);

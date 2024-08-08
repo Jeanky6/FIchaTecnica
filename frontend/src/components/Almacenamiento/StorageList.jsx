@@ -15,7 +15,7 @@ function StorageList() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('${URL.API}/api/v1/storage')
+    axios.get(`${URL.API}/api/v1/storage`)
       .then(response => {
         setStorages(response.data.storages);
         console.log(response.data);

@@ -36,7 +36,7 @@ const CreateStorage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('${URL.API}/api/v1/storage', formData);
+      await axios.post(`${URL.API}/api/v1/storage`, formData);
       setSuccess(true);
       setError(false);
       setTimeout(() => {

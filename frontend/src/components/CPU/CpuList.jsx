@@ -15,7 +15,7 @@ function CPUList() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('${URL.API}/api/v1/cpu')
+    axios.get(`${URL.API}/api/v1/cpu`)
       .then(response => {
         setCPUs(response.data.cpus);
         console.log(response.data);

@@ -15,7 +15,7 @@ function RAMList() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('${URL.API}/api/v1/ram')
+    axios.get(`${URL.API}/api/v1/ram`)
       .then(response => {
         setRAMs(response.data.rams);
         console.log(response.data); 
