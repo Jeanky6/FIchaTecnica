@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import URL from '../../constants/api';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Container, Row, Col, Card, Form } from 'react-bootstrap';
 import { CDBBtn, CDBIcon } from 'cdbreact';
@@ -25,7 +26,7 @@ const EditCPU = () => {
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    axios.get(`http://127.0.0.1:3300/api/v1/cpu/${id}`)
+    axios.get(`${URL.API}/api/v1/cpu/${id}`)
       .then(response => {
         setFormData(response.data.cpu);
         console.log(response.data);
@@ -45,7 +46,7 @@ const EditCPU = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://127.0.0.1:3300/api/v1/cpu/${id}`, formData);
+      await axios.put(`${URL.API}/api/v1/cpu/${id}`, formData);
       setSuccess(true);
       setError(false);
       setTimeout(() => {

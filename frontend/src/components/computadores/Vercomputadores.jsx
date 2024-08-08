@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import URL from '../../constants/api';
 import { motion } from 'framer-motion';
 import { FaSearch, FaPlus } from 'react-icons/fa';
 import './computadoreslist.css';
+
 
 function ComputadorList() {
   const [computadores, setComputadores] = useState([]);
@@ -14,7 +16,7 @@ function ComputadorList() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://127.0.0.1:3300/api/v1/computador')
+    axios.get(`${URL.API}/api/v1/computador`)
       .then(response => {
         setComputadores(response.data.computers);
         setFilteredComputadores(response.data.computers);

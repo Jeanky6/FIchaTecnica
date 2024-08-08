@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import URL from '../../constants/api';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaArrowLeft, FaEdit, FaTrash } from 'react-icons/fa';
 import './Computadordetails.css';
@@ -14,7 +15,7 @@ function ComputadorDetalle() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://127.0.0.1:3300/api/v1/computador/${id}`)
+    axios.get(`${URL.API}/api/v1/computador/${id}`)
       .then(response => {
         setComputador(response.data.computer);
         setLoading(false);
@@ -31,7 +32,7 @@ function ComputadorDetalle() {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://127.0.0.1:3300/api/v1/computador/${id}`);
+      await axios.delete(`${URL.API}/api/v1/computador/${id}`);
       setShowModal(false);
       navigate('/');
     } catch (error) {

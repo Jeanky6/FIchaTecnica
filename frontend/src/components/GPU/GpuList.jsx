@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import URL from '../../constants/api';
 import { motion } from 'framer-motion';
 import { FaSearch, FaPlus } from 'react-icons/fa';
 import '../computadores/computadoreslist.css';
@@ -14,7 +15,7 @@ function GPUList() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://127.0.0.1:3300/api/v1/gpu')
+    axios.get('${URL.API}/api/v1/gpu')
       .then(response => {
         setGPUs(response.data.gpus);
         console.log(response.data);

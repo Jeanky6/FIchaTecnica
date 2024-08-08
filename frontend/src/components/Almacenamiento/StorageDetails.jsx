@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import URL from '../../constants/api';
 import { motion } from 'framer-motion';
 import { FaArrowLeft, FaEdit, FaTrash } from 'react-icons/fa';
 import '../computadores/Computadordetails.css';
@@ -14,7 +15,7 @@ function StorageDetalle() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://127.0.0.1:3300/api/v1/storage/${id}`)
+    axios.get(`${URL.API}/api/v1/storage/${id}`)
       .then(response => {
         setStorage(response.data.storage);
         setLoading(false);
@@ -31,7 +32,7 @@ function StorageDetalle() {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://127.0.0.1:3300/api/v1/storage/${id}`);
+      await axios.delete(`${URL.API}/api/v1/storage/${id}`);
       setShowModal(false);
       navigate('/storages');
     } catch (error) {

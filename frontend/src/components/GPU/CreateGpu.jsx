@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import URL from '../../constants/api';
 import { Container, Row, Col, Card, Form } from 'react-bootstrap';
 import { CDBBtn, CDBIcon } from 'cdbreact';
 import { Alert, Stack } from '@mui/material';
@@ -34,7 +35,7 @@ const CreateGPU = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://127.0.0.1:3300/api/v1/gpu', formData);
+      await axios.post('${URL.API}/api/v1/gpu', formData);
       setSuccess(true);
       setError(false);
       setTimeout(() => {

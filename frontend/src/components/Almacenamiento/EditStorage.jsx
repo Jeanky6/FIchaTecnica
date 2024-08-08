@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import URL from '../../constants/api';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Container, Row, Col, Card, Form } from 'react-bootstrap';
 import { CDBBtn, CDBIcon } from 'cdbreact';
@@ -26,7 +27,7 @@ const EditStorage = () => {
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    axios.get(`http://127.0.0.1:3300/api/v1/storage/${id}`)
+    axios.get(`${URL.API}/api/v1/storage/${id}`)
       .then(response => {
         setFormData(response.data.storage);
         console.log('Detalles del almacenamiento:', response.data);
@@ -46,7 +47,7 @@ const EditStorage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://127.0.0.1:3300/api/v1/storage/${id}`, formData);
+      await axios.put(`${URL.API}/api/v1/storage/${id}`, formData);
       setSuccess(true);
       setError(false);
       setTimeout(() => {

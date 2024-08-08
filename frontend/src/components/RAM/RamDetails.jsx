@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import URL from '../../constants/api';
 import { motion } from 'framer-motion';
 import { FaArrowLeft, FaEdit, FaTrash } from 'react-icons/fa';
 import '../computadores/Computadordetails.css';
@@ -14,7 +15,7 @@ function RAMDetalle() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://127.0.0.1:3300/api/v1/ram/${id}`)
+    axios.get(`${URL.API}/api/v1/ram/${id}`)
       .then(response => {
         setRAM(response.data.ram);
         setLoading(false);
@@ -31,7 +32,7 @@ function RAMDetalle() {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://127.0.0.1:3300/api/v1/ram/${id}`);
+      await axios.delete(`${URL.API}/api/v1/ram/${id}`);
       setShowModal(false);
       navigate('/rams');
     } catch (error) {

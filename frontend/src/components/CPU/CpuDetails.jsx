@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import URL from '../../constants/api';
 import { motion } from 'framer-motion';
 import { FaArrowLeft, FaEdit, FaTrash } from 'react-icons/fa';
 import '../computadores/Computadordetails.css';
@@ -14,7 +15,7 @@ function CPUDetalle() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://127.0.0.1:3300/api/v1/cpu/${id}`)
+    axios.get(`${URL.API}/api/v1/cpu/${id}`)
       .then(response => {
         setCPU(response.data.cpu);
         setLoading(false);
@@ -31,7 +32,7 @@ function CPUDetalle() {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://127.0.0.1:3300/api/v1/cpu/${id}`);
+      await axios.delete(`${URL.API}/api/v1/cpu/${id}`);
       setShowModal(false);
       navigate('/cpus');
     } catch (error) {

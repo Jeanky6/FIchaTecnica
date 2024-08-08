@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import URL from '../../constants/api';
 import { motion } from 'framer-motion';
 import { FaArrowLeft, FaEdit, FaTrash } from 'react-icons/fa';
 import '../computadores/Computadordetails.css';
@@ -14,7 +15,7 @@ function GPUDetalle() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://127.0.0.1:3300/api/v1/gpu/${id}`)
+    axios.get(`${URL.API}/api/v1/gpu/${id}`)
       .then(response => {
         setGPU(response.data.gpu);
         setLoading(false);
@@ -31,7 +32,7 @@ function GPUDetalle() {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://127.0.0.1:3300/api/v1/gpu/${id}`);
+      await axios.delete(`${URL.API}/api/v1/gpu/${id}`);
       setShowModal(false);
       navigate('/gpus');
     } catch (error) {
