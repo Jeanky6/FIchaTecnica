@@ -5,6 +5,7 @@ import { CDBBtn, CDBIcon } from "cdbreact";
 import { Alert, Stack } from "@mui/material";
 import "../computadores/computadores.css";
 import { useNavigate } from "react-router-dom";
+import URL from "../../constants/api";
 
 const CreateComputer = () => {
   const [formData, setFormData] = useState({

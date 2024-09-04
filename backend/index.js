@@ -1,8 +1,8 @@
 const express = require('express')
-const { port: APP_PORT, port } = require('./config/config')
-const routerApi = require('./routes/index')
+const { port: APP_PORT, port } = require('./src/config/config')
+const routerApi = require('./src/routes/index')
 const cors = require('cors')
-const connect = require("./libs/mongoose");
+const connect = require("./src/libs/mongoose");
 const app = express()
 connect();
 
